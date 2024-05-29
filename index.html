@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupanuga Prasad Mishra</title>
+</head>
+<style>
+/* styles.css */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 1rem;
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 2rem;
+    background-color: white;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    width: 80%;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #0073e6;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+}
+
+//navigation bar
+
+div.navbar{
+	width:100%
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: black;
+  box-shadow: 0 0 20px rgba(220, 220, 220, 1);
+}
+
+#navbar a {
+  float: left;
+  display: flex;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #0073e6;
+  color: white;
+}
+#navbar a.active:hover {
+  background-color: lightblue;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+</style>
+<body>
+    <header id="about">
+        <h1>Rupanuga Prasad Mishra</h1>
+        <p>Bachelor of Engineering, NIT Durgapur</p>
+    </header>
+    <div id="navbar">
+  		<a class="active" href="#about">About</a>
+		<a href="#education">Education</a>
+  		<a href="#projects">Projects</a>
+  		<a href="#contact">Contact</a>
+    </div>
+    <section id="education">
+        <h2>Education</h2>
+        <p>National Institute of Technology, Durgapur, India</p>
+        <p>Computer Science and Engineering (CSE) (Sep 2021 - May 2025)</p>
+        <p>Courses:<br>Linear Algebra, Probability and Statistics, Object Oriented Programming, DBMS, Operating Systems, Design and Analysis of Algorithms, Foundations of Data Science, Embedded Systems, Computer Architecture</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <h3>Generalized Persistent Lazy Segment Tree</h3>
+                <p>Dec 2023 - Jan 2024 | <a href="https://github.com/RupanugaPM/Generalized-Lazy-Segment-Tree" target="_blank">GitHub</a></p>
+                <p>Created a Generalized Template for Persistent Lazy Segment Tree supporting various segment tree operations with version control.</p>
+            </li>
+            <li>
+                <h3>Library Management System</h3>
+                <p>Sep 2021 - Jan 2022 | <a href="https://github.com/RupanugaPM/Library-Management-System-in-Python" target="_blank">GitHub</a></p>
+                <p>A command line tool for efficiently managing books in a library with dual access levels and secure access.</p>
+            </li>
+            <li>
+                <h3>Two Player Chess Game</h3>
+                <p>Apr 2022 - May 2022 | <a href="https://github.com/RupanugaPM/Chess-app" target="_blank">GitHub</a></p>
+                <p>Implemented a Two-Player Chess Application supporting all legal chess moves, including En-Passant.</p>
+            </li>
+            <li>
+                <h3>Minimum Cost Triangulation of a Polygon</h3>
+                <p>June 2023 - Sep 2023 | <a href="https://github.com/RupanugaPM/minimum-traingulation-cost-of-convex-polygon-visualization" target="_blank">GitHub</a></p>
+                <p>Calculation and visualization of the Minimum-Weight Triangulation problem using Dynamic Programming.</p>
+            </li>
+        </ul>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <p><strong>Programming Languages:</strong> C, C++, Python, SQL, HTML, CSS, Javascript</p>
+        <p><strong>Foundational Concepts:</strong> Linear Algebra, Advanced DSA, Probability and Statistics, OOPS, DBMS</p>
+        <p><strong>Skills:</strong> Data Science, Web Development, Relational Database Management</p>
+        <p><strong>Toolkits/Libraries:</strong> Numpy, Pandas, Linux, Matplotlib, Pygame, VSCode, Git</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:mishra.rprm@gmail.com">mishra.rprm@gmail.com</a></p>
+        <p>Phone: (+91) 8100662700</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/rupanuga-p-mishra-4374b2252/" target="_blank">Rupanuga P. Mishra</a></p>
+        <p>GitHub: <a href="https://github.com/RupanugaPM" target="_blank">RupanugaPM</a></p>
+        <p>Website: <a href="https://rupanugapm.github.io/" target="_blank">rupanugapm.github.io</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Rupanuga Prasad Mishra</p>
+    </footer>
+</body>
+<script>
+// scripts.js
+
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// nav bar
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+</script>
+</html>
