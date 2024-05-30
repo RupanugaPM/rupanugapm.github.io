@@ -4,116 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rupanuga Prasad Mishra</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-/* styles.css */
-
-html{
-    scroll-behavior:smooth;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white;
-}
-
-header {
-    background-color: black;
-    color: white;
-    padding: 1rem 2rem;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    margin: 0.5rem 0 1rem;
-    font-size: 1.2rem;
-}
-
-section {
-    padding: 2rem;
-    background-color: white;
-    margin: 1rem auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    width: 80%;
-}
-
-section h2 {
-    font-size: 2rem;
-    color: #0073e6;
-}
-
-
-
-footer {
-    text-align: center;
-    padding: 1rem 2rem;
-    background-color: #333;
-    color: white;
-}
-
-footer p {
-    margin: 0;
-}
-
-//navigation bar
-
-div.navbar{
-	width:100%
-}
-
-#navbar {
-  overflow: hidden;
-  background-color: black;
-  box-shadow: 0 0 20px rgba(220, 220, 220, 1);
-}
-
-#navbar a {
-  float: left;
-  display: flex;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-#navbar a.active {
-  background-color: #0073e6;
-  color: white;
-}
-#navbar a.active:hover {
-  background-color: lightblue;
-  color: white;
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-
-</style>
+<script src="scripts.js"></script>
 <body>
     <header id="about">
         <h1>Rupanuga Prasad Mishra</h1>
@@ -174,6 +67,7 @@ div.navbar{
     <footer>
         <p>&copy; 2024 Rupanuga Prasad Mishra</p>
     </footer>
+
 </body>
 <script>
 // scripts.js
@@ -188,7 +82,7 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// nav bar
+// navigation bar
 window.onscroll = function() {myFunction()};
 
 var navbar = document.getElementById("navbar");
