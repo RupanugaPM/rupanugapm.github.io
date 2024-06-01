@@ -15,8 +15,10 @@
     <div id="navbar">
   		<a class="active" href="#about">About</a>
 		<a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+		<a href="#achievements">Achievements</a>
+		<a href="#dsaprofile">DSA and Competitive Programming</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
   		<a href="#contact">Contact</a>
     </div>
     <section id="education">
@@ -24,6 +26,37 @@
         <p>National Institute of Technology, Durgapur, India</p>
         <p>Computer Science and Engineering (CSE) (Sep 2021 - May 2025)</p>
         <p>Courses:<br>Linear Algebra, Probability and Statistics, Object Oriented Programming, Software Engineering, Database Management System, Operating Systems, Design and Analysis of Algorithms, Foundations of Data Science, Embedded Systems, Computer Architecture, Advanced Algorithms, Optimization Techniques</p>
+    </section>
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <p>Only Person in the batch to get EX grade in advanced DSA course in NIT DGP (Rank 1) 3rd Year</p>
+        <p>Qualified Gate Computer Science in 3rd Year with rank in the top 1%(99th percentile).</p>
+    </section>
+    <section id="dsaprofile">
+        <h2>DSA and Competitive Programming</h2>
+        <div class="tab">
+  <button class="tablinks" onclick="opensite(event, 'Codeforces')" id="defaultOpen">Codeforces</button>
+  <button class="tablinks" onclick="opensite(event, 'Codechef')">Codechef</button>
+  <button class="tablinks" onclick="opensite(event, 'Leetcode')">Leetcode</button>
+</div>
+
+<div id="Codeforces" class="tabcontent">
+  <h3>Codeforces</h3>
+  <p>One of the first competitive programming sites.</p>
+  <p>Reached Expert being in the top 4% site wide of 600k total users.</p>
+</div>
+
+<div id="Codechef" class="tabcontent">
+  <h3>Codechef</h3>
+  <p>Every Computer Science student has heard of this site in India.</p> 
+  <p>Reached 6 Stars being in 0.2% site wide.</p>
+</div>
+
+<div id="Leetcode" class="tabcontent">
+  <h3>Leetcode</h3>
+  <p>A classic website to study dsa.</p>
+  <p>Reach the Status of Guardian. Reaching Top 1%.</p>
+</div>
     </section>
     <section id="projects">
         <h2>Projects</h2>
@@ -105,6 +138,24 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+// tabs function to open cp site
+function opensite(evt, siteName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(siteName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+
+// Get the element with id="defaultOpen" and click on it
 
 </script>
 </html>
