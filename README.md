@@ -1,3 +1,3 @@
 # mywebsite
-Check it out! Its deployed.
+Check it out at rupanugapm.github.io ! Its deployed.
 Done.
