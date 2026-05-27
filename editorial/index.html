@@ -30,7 +30,8 @@
         <header class="fixed top-6 left-0 right-0 z-[100] flex justify-center px-4">
             <nav id="site-nav" class="nav-pill rounded-full px-2 py-2 flex items-center gap-1 text-sm" aria-label="Main">
                 <a href="../" class="px-3 py-2 rounded-full text-zinc-400 hover:text-white transition-colors text-xs">Designs</a>
-                <a href="#work" class="px-4 py-2 rounded-full hover:bg-white/5 transition-colors">Work</a>
+                <a href="#experience" class="px-4 py-2 rounded-full hover:bg-white/5 transition-colors">Experience</a>
+                <a href="#projects" class="px-4 py-2 rounded-full hover:bg-white/5 transition-colors">Projects</a>
                 <a href="#story" class="px-4 py-2 rounded-full hover:bg-white/5 transition-colors">Story</a>
                 <a href="#craft" class="px-4 py-2 rounded-full hover:bg-white/5 transition-colors">Craft</a>
                 <a href="#achievements" class="px-4 py-2 rounded-full hover:bg-white/5 transition-colors">Milestones</a>
@@ -51,7 +52,7 @@
                     Spring Boot, machine learning, and competitive-grade algorithms — shipped with SonarQube A+ discipline and human-centered motion.
                 </p>
                 <div class="hero-anim mt-12 flex flex-wrap justify-center gap-4">
-                    <a href="#work" class="px-8 py-4 rounded-full bg-white text-ink font-semibold hover:bg-zinc-100 transition-colors">Explore selected work</a>
+                    <a href="#experience" class="px-8 py-4 rounded-full bg-white text-ink font-semibold hover:bg-zinc-100 transition-colors">View experience</a>
                     <a href="#contact" class="px-8 py-4 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors">Start a conversation</a>
                 </div>
             </div>
@@ -122,11 +123,61 @@
             </div>
         </section>
 
-        <!-- DESIRE: Pin gallery -->
-        <section id="work" class="pin-gallery py-32 md:py-48 px-6" aria-labelledby="work-heading">
+        <!-- Experience -->
+        <section id="experience" class="py-32 md:py-48 px-6" aria-labelledby="experience-heading">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="experience-heading" class="text-4xl md:text-5xl font-bold tracking-tight max-w-3xl leading-tight mb-4">Professional experience</h2>
+                <p class="text-zinc-400 text-lg max-w-2xl mb-16 leading-relaxed">Enterprise platform engineering and assessment infrastructure — from production APIs to global contest quality.</p>
+
+                <div class="experience-list space-y-8">
+                    <article class="experience-card exp-anim rounded-3xl border border-white/10 bg-white/[0.03] overflow-hidden">
+                        <div class="grid md:grid-cols-[220px_1fr] gap-0">
+                            <div class="experience-side p-8 md:p-10 border-b md:border-b-0 md:border-r border-white/10 bg-zinc-900/50">
+                                <p class="text-sm text-violet-300 font-medium uppercase tracking-widest">Current</p>
+                                <h3 class="text-2xl font-bold mt-3 leading-tight">Cisco Systems</h3>
+                                <p class="text-zinc-400 mt-2 text-sm">Software Engineer</p>
+                                <p class="text-zinc-500 mt-6 text-sm">Jan 2025 — Present</p>
+                            </div>
+                            <div class="p-8 md:p-10">
+                                <ul class="experience-bullets space-y-4 text-zinc-300 leading-relaxed">
+                                    <li>Engineered a high-performance local caching mechanism in <strong class="text-white font-medium">Spring Boot</strong> for the main Cisco CCRC webpage, reducing latency and improving performance by <strong class="text-white font-medium">~20%</strong>.</li>
+                                    <li>Developed multiple Spring Boot APIs connecting <strong class="text-white font-medium">BotService</strong> to the CCRC webpage, spearheading <strong class="text-white font-medium">AI automation</strong> integration for operational efficiency.</li>
+                                    <li>Refactored and optimized critical codebases to achieve an <strong class="text-white font-medium">A+ SonarQube</strong> quality rating, improving maintainability and reducing technical debt.</li>
+                                    <li>Implemented ML anomaly detection in <strong class="text-white font-medium">Snowflake</strong> databases for attribute-level error monitoring, achieving <strong class="text-white font-medium">90%+ accuracy</strong> on production data.</li>
+                                    <li>Developed and maintained scalable enterprise <strong class="text-white font-medium">REST APIs</strong> using Spring Boot, collaborating with cross-functional teams to deliver robust solutions.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="experience-card exp-anim rounded-3xl border border-white/10 bg-white/[0.03] overflow-hidden">
+                        <div class="grid md:grid-cols-[220px_1fr] gap-0">
+                            <div class="experience-side p-8 md:p-10 border-b md:border-b-0 md:border-r border-white/10 bg-zinc-900/50">
+                                <p class="text-sm text-zinc-500 font-medium uppercase tracking-widest">Previous</p>
+                                <h3 class="text-2xl font-bold mt-3 leading-tight">HackerEarth</h3>
+                                <p class="text-zinc-400 mt-2 text-sm">Software Engineer Intern</p>
+                                <p class="text-zinc-500 mt-6 text-sm">Jun 2024 — Dec 2024</p>
+                            </div>
+                            <div class="p-8 md:p-10">
+                                <ul class="experience-bullets space-y-4 text-zinc-300 leading-relaxed">
+                                    <li>Created <strong class="text-white font-medium">60+ high-quality DSA problems</strong> for online assessments, focusing on diverse algorithmic topics.</li>
+                                    <li>Reviewed and corrected <strong class="text-white font-medium">150+ problem suites</strong> across C++, Python, Java, and Golang.</li>
+                                    <li>Built a highly efficient test-case generator capable of generating <strong class="text-white font-medium">10 million test-case lines per second</strong>.</li>
+                                    <li>Conducted <strong class="text-white font-medium">30+ technical interviews</strong>, evaluating DSA knowledge for engineering intern roles.</li>
+                                    <li>Optimized problem difficulty distribution and enhanced assessment quality metrics for <strong class="text-white font-medium">global contests</strong>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESIRE: Pin gallery (projects) -->
+        <section id="projects" class="pin-gallery py-32 md:py-48 px-6" aria-labelledby="projects-heading">
             <div class="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.2fr] gap-16">
                 <div class="pin-title-col h-fit md:pt-12">
-                    <h2 id="work-heading" class="text-4xl md:text-5xl font-bold tracking-tight leading-tight">Selected deployments</h2>
+                    <h2 id="projects-heading" class="text-4xl md:text-5xl font-bold tracking-tight leading-tight">Selected projects</h2>
                     <p class="mt-6 text-zinc-400 leading-relaxed">Products and research artifacts where systems thinking meets craft.</p>
                 </div>
                 <div class="space-y-24">

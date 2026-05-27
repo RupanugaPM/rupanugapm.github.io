@@ -3,8 +3,10 @@
 
   const STORAGE_KEY = 'rpm-portfolio-design';
   const designs = {
+    minimalist: 'minimalist/',
     industrial: 'industrial/',
     editorial: 'editorial/',
+    ethereal: 'ethereal/',
   };
 
   function getStoredDesign() {

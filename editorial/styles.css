@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -124,6 +125,37 @@ body {
 
 .testimonial-card {
   min-width: min(100%, 420px);
+}
+
+.experience-card {
+  transition: border-color 0.3s;
+}
+
+.experience-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.experience-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.experience-bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.experience-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(167, 139, 250, 0.8);
 }
 
 .milestone-card {

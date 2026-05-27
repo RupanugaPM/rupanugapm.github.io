@@ -111,6 +111,22 @@
     });
   }
 
+  function initExperience() {
+    if (prefersReduced) return;
+
+    gsap.from('.exp-anim', {
+      y: 48,
+      opacity: 0,
+      duration: 0.85,
+      stagger: 0.15,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '#experience',
+        start: 'top 78%',
+      },
+    });
+  }
+
   function initMilestones() {
     if (prefersReduced) return;
 
@@ -169,6 +185,7 @@
       initRevealImages();
       initScrubText();
       initPinGallery();
+      initExperience();
       initMilestones();
     }
     initBentoHover();
