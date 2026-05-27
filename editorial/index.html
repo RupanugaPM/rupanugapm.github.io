@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rupanuga Prasad Mishra — Software Engineer. Editorial portfolio with motion-rich storytelling.">
+    <title>Rupanuga Prasad Mishra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { outfit: ['Outfit', 'system-ui', 'sans-serif'] },
+                    colors: {
+                        ink: '#0a0a0f',
+                        snow: '#f8f8fa',
+                    },
+                },
+            },
+        };
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body class="font-outfit bg-ink text-snow antialiased">
+    <div class="grain" aria-hidden="true"></div>
+
+    <main class="overflow-x-hidden w-full max-w-full">
+        <header class="fixed top-6 left-0 right-0 z-[100] flex justify-center px-4">
+            <nav id="site-nav" class="nav-pill rounded-full px-2 py-2 flex items-center gap-1 text-sm" aria-label="Main">
+                <a href="../" class="px-3 py-2 rounded-full text-zinc-400 hover:text-white transition-colors text-xs">Designs</a>
+                <a href="#work" class="px-4 py-2 rounded-full hover:bg-white/5 transition-colors">Work</a>
+                <a href="#story" class="px-4 py-2 rounded-full hover:bg-white/5 transition-colors">Story</a>
+                <a href="#craft" class="px-4 py-2 rounded-full hover:bg-white/5 transition-colors">Craft</a>
+                <a href="#achievements" class="px-4 py-2 rounded-full hover:bg-white/5 transition-colors">Milestones</a>
+                <a href="#contact" class="ml-1 px-5 py-2 rounded-full bg-white text-ink font-semibold hover:bg-zinc-200 transition-colors">Contact</a>
+            </nav>
+        </header>
+
+        <!-- ATTENTION: Cinematic Center Hero -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Introduction">
+            <div class="hero-bg absolute inset-0" aria-hidden="true"></div>
+            <div class="hero-wash absolute inset-0" aria-hidden="true"></div>
+            <div class="relative z-10 w-full max-w-6xl mx-auto px-6 pt-32 pb-24 text-center">
+                <p class="hero-anim text-zinc-400 text-sm tracking-[0.2em] uppercase mb-6">Software Engineer at Cisco</p>
+                <h1 class="hero-anim text-[clamp(2.75rem,5vw,5.5rem)] font-bold leading-[1.05] tracking-tight max-w-6xl mx-auto">
+                    I build resilient backends and cinematic digital experiences
+                </h1>
+                <p class="hero-anim mt-8 text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+                    Spring Boot, machine learning, and competitive-grade algorithms — shipped with SonarQube A+ discipline and human-centered motion.
+                </p>
+                <div class="hero-anim mt-12 flex flex-wrap justify-center gap-4">
+                    <a href="#work" class="px-8 py-4 rounded-full bg-white text-ink font-semibold hover:bg-zinc-100 transition-colors">Explore selected work</a>
+                    <a href="#contact" class="px-8 py-4 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition-colors">Start a conversation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTEREST: Gapless Bento -->
+        <section id="craft" class="py-32 md:py-48 px-6" aria-labelledby="craft-heading">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="craft-heading" class="text-4xl md:text-6xl font-bold tracking-tight max-w-4xl leading-[1.1] mb-16">
+                    I shape
+                    <span class="inline-img align-middle" style="background-image:url('https://picsum.photos/seed/code/200/80')" role="img" aria-label=""></span>
+                    digital systems with editorial precision
+                </h2>
+
+                <div class="grid grid-cols-4 auto-rows-[160px] md:auto-rows-[200px] gap-4 grid-flow-dense">
+                    <article class="bento-card col-span-4 md:col-span-2 md:row-span-2 rounded-3xl p-8 flex flex-col justify-end overflow-hidden group relative">
+                        <div class="bento-media absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-out" style="background-image:url('https://picsum.photos/seed/cisco-network/800/800')"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold">Cisco Systems</h3>
+                            <p class="text-zinc-400 mt-2 text-sm max-w-xs">CCRC caching, BotService AI APIs, Snowflake ML — 20% latency cut.</p>
+                        </div>
+                    </article>
+                    <article class="bento-card col-span-2 md:col-span-1 rounded-3xl p-6 flex flex-col justify-between overflow-hidden">
+                        <p class="text-5xl font-bold tracking-tighter">99</p>
+                        <p class="text-zinc-400 text-sm">GATE percentile · rank 1501</p>
+                    </article>
+                    <article class="bento-card col-span-2 md:col-span-1 rounded-3xl p-6 flex flex-col justify-between overflow-hidden relative group">
+                        <div class="bento-media absolute inset-0 opacity-30 bg-cover bg-center" style="background-image:url('https://picsum.photos/seed/algorithms/600/400')"></div>
+                        <div class="relative z-10">
+                            <p class="text-2xl font-bold">Expert</p>
+                            <p class="text-zinc-400 text-sm">Codeforces · 6-star CodeChef</p>
+                        </div>
+                    </article>
+                    <article class="bento-card col-span-4 md:col-span-2 rounded-3xl p-8 overflow-hidden relative group">
+                        <div class="bento-media absolute inset-0 bg-cover bg-center opacity-40" style="background-image:url('https://picsum.photos/seed/hackerearth/900/500')"></div>
+                        <div class="relative z-10 max-w-md">
+                            <h3 class="text-xl font-bold">HackerEarth</h3>
+                            <p class="text-zinc-400 mt-2 text-sm">60+ DSA problems · 10M lines/sec test generator · 30+ interviews.</p>
+                        </div>
+                    </article>
+                    <article class="bento-card col-span-4 md:col-span-2 rounded-3xl p-8 flex items-center justify-center text-center">
+                        <p class="text-lg text-zinc-300 max-w-sm">NIT Durgapur · B.Eng. Computer Science · GPA 8.00</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee -->
+        <section class="py-16 border-y border-white/5 overflow-hidden" aria-label="Technologies">
+            <div class="marquee-track gap-16 text-2xl md:text-4xl font-semibold text-white/20 uppercase tracking-widest">
+                <span class="px-8">Spring Boot</span>
+                <span class="px-8">Python</span>
+                <span class="px-8">Snowflake</span>
+                <span class="px-8">GSAP</span>
+                <span class="px-8">C++</span>
+                <span class="px-8">Django</span>
+                <span class="px-8">SonarQube</span>
+                <span class="px-8">Docker</span>
+                <span class="px-8">Spring Boot</span>
+                <span class="px-8">Python</span>
+                <span class="px-8">Snowflake</span>
+                <span class="px-8">GSAP</span>
+                <span class="px-8">C++</span>
+                <span class="px-8">Django</span>
+                <span class="px-8">SonarQube</span>
+                <span class="px-8">Docker</span>
+            </div>
+        </section>
+
+        <!-- DESIRE: Pin gallery -->
+        <section id="work" class="pin-gallery py-32 md:py-48 px-6" aria-labelledby="work-heading">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.2fr] gap-16">
+                <div class="pin-title-col h-fit md:pt-12">
+                    <h2 id="work-heading" class="text-4xl md:text-5xl font-bold tracking-tight leading-tight">Selected deployments</h2>
+                    <p class="mt-6 text-zinc-400 leading-relaxed">Products and research artifacts where systems thinking meets craft.</p>
+                </div>
+                <div class="space-y-24">
+                    <article class="pin-item">
+                        <div class="reveal-img rounded-3xl overflow-hidden aspect-[16/10] mb-6">
+                            <img src="https://picsum.photos/seed/puzzle-game/1200/750" alt="" class="w-full h-full object-cover img-editorial" width="1200" height="750">
+                        </div>
+                        <h3 class="text-2xl font-bold">That Time I Reincarnated As A Box</h3>
+                        <p class="text-zinc-400 mt-2">Pygame narrative puzzle-platformer · 8 floors · Aug 2025</p>
+                        <a href="https://github.com/RupanugaPM/thatTimeIReincarnatedAsABox" class="inline-block mt-4 text-sm font-semibold underline underline-offset-4" target="_blank" rel="noopener noreferrer">View repository</a>
+                    </article>
+                    <article class="pin-item">
+                        <div class="reveal-img rounded-3xl overflow-hidden aspect-[16/10] mb-6">
+                            <img src="https://picsum.photos/seed/aviation-map/1200/750" alt="" class="w-full h-full object-cover img-editorial" width="1200" height="750">
+                        </div>
+                        <h3 class="text-2xl font-bold">Flight Navigation Optimization</h3>
+                        <p class="text-zinc-400 mt-2">Aerothon 6.0 · Django · Dijkstra on dynamic graphs</p>
+                        <a href="https://github.com/RupanugaPM/Dijkstra-visualizer-in-a-World-Map" class="inline-block mt-4 text-sm font-semibold underline underline-offset-4" target="_blank" rel="noopener noreferrer">View repository</a>
+                    </article>
+                    <article class="pin-item">
+                        <div class="reveal-img rounded-3xl overflow-hidden aspect-[16/10] mb-6">
+                            <img src="https://picsum.photos/seed/segment-tree/1200/750" alt="" class="w-full h-full object-cover img-editorial" width="1200" height="750">
+                        </div>
+                        <h3 class="text-2xl font-bold">Persistent Lazy Segment Tree</h3>
+                        <p class="text-zinc-400 mt-2">C++ template · 2x range ops · 30x rollback</p>
+                        <a href="https://github.com/RupanugaPM/Generalized-Lazy-Segment-Tree" class="inline-block mt-4 text-sm font-semibold underline underline-offset-4" target="_blank" rel="noopener noreferrer">View repository</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scrub text reveal -->
+        <section id="story" class="py-32 md:py-48 px-6" aria-label="About">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="scrub-block text-2xl md:text-4xl font-medium leading-snug tracking-tight">
+                    <span class="scrub-word">I</span>
+                    <span class="scrub-word">engineer</span>
+                    <span class="scrub-word">high-performance</span>
+                    <span class="scrub-word">caching</span>
+                    <span class="scrub-word">layers,</span>
+                    <span class="scrub-word">integrate</span>
+                    <span class="scrub-word">AI</span>
+                    <span class="scrub-word">into</span>
+                    <span class="scrub-word">enterprise</span>
+                    <span class="scrub-word">workflows,</span>
+                    <span class="scrub-word">and</span>
+                    <span class="scrub-word">author</span>
+                    <span class="scrub-word">assessment</span>
+                    <span class="scrub-word">infrastructure</span>
+                    <span class="scrub-word">at</span>
+                    <span class="scrub-word">global</span>
+                    <span class="scrub-word">scale.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Horizontal accordion -->
+        <section class="py-32 md:py-48 px-6" aria-label="Expertise areas">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-12 max-w-3xl">Depth across the stack</h2>
+                <div class="flex h-[320px] md:h-[400px] rounded-3xl overflow-hidden border border-white/10" role="list">
+                    <div class="accordion-slice bg-zinc-900/80 relative" tabindex="0" role="listitem">
+                        <div class="slice-label absolute bottom-6 left-0 right-0 text-center text-xs tracking-widest uppercase text-zinc-500 [writing-mode:vertical-rl] rotate-180 mx-auto h-fit">Languages</div>
+                        <div class="slice-inner p-8 h-full flex flex-col justify-end bg-gradient-to-t from-ink">
+                            <p class="text-xl font-semibold">C, C++, Python, SQL, JavaScript</p>
+                            <p class="text-zinc-400 text-sm mt-2">Production backends and competitive tooling.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-slice bg-zinc-900/60 relative" tabindex="0" role="listitem">
+                        <div class="slice-label absolute bottom-6 left-0 right-0 text-center text-xs tracking-widest uppercase text-zinc-500 [writing-mode:vertical-rl] rotate-180 mx-auto h-fit">Systems</div>
+                        <div class="slice-inner p-8 h-full flex flex-col justify-end" style="background-image:url('https://picsum.photos/seed/distributed/600/400'); background-size:cover">
+                            <div class="bg-ink/80 p-4 rounded-2xl backdrop-blur-sm">
+                                <p class="text-xl font-semibold">Distributed systems &amp; ML</p>
+                                <p class="text-zinc-400 text-sm mt-2">Snowflake anomaly detection, Spring microservices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-slice bg-zinc-900/80 relative" tabindex="0" role="listitem">
+                        <div class="slice-label absolute bottom-6 left-0 right-0 text-center text-xs tracking-widest uppercase text-zinc-500 [writing-mode:vertical-rl] rotate-180 mx-auto h-fit">Leadership</div>
+                        <div class="slice-inner p-8 h-full flex flex-col justify-end bg-gradient-to-t from-ink">
+                            <p class="text-xl font-semibold">Cross-functional delivery</p>
+                            <p class="text-zinc-400 text-sm mt-2">Interviews, mentoring, contest design at HackerEarth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section id="achievements" class="py-32 md:py-48 px-6" aria-labelledby="achievements-heading">
+            <div class="max-w-6xl mx-auto">
+                <h2 id="achievements-heading" class="text-3xl md:text-5xl font-bold tracking-tight mb-4 max-w-3xl">Competitive milestones</h2>
+                <p class="text-zinc-400 mb-14 max-w-xl">Rankings and credentials from contests, academics, and global platforms.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 grid-flow-dense">
+                    <article class="milestone-card rounded-3xl border border-white/10 bg-white/[0.03] p-8 lg:col-span-1">
+                        <p class="text-sm text-zinc-500 uppercase tracking-widest">GATE 2025</p>
+                        <p class="text-5xl md:text-6xl font-bold tracking-tighter mt-3 text-violet-300">99%</p>
+                        <p class="text-zinc-400 mt-3 text-sm leading-relaxed">Percentile · Rank 1501 of 210,000</p>
+                    </article>
+                    <article class="milestone-card rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+                        <p class="text-sm text-zinc-500 uppercase tracking-widest">Codeforces</p>
+                        <p class="text-4xl font-bold tracking-tight mt-3">Expert</p>
+                        <p class="text-zinc-400 mt-3 text-sm">1850+ · Top 300 global in 3+ contests</p>
+                    </article>
+                    <article class="milestone-card rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+                        <p class="text-sm text-zinc-500 uppercase tracking-widest">CodeChef</p>
+                        <p class="text-4xl font-bold tracking-tight mt-3">6 Star</p>
+                        <p class="text-zinc-400 mt-3 text-sm">Top 0.2% worldwide</p>
+                    </article>
+                    <article class="milestone-card rounded-3xl border border-white/10 bg-white/[0.03] p-8">
+                        <p class="text-sm text-zinc-500 uppercase tracking-widest">LeetCode</p>
+                        <p class="text-4xl font-bold tracking-tight mt-3">Guardian</p>
+                        <p class="text-zinc-400 mt-3 text-sm">Top 1% on platform</p>
+                    </article>
+                    <article class="milestone-card rounded-3xl border border-white/10 bg-white/[0.03] p-8 sm:col-span-2 lg:col-span-1">
+                        <p class="text-sm text-zinc-500 uppercase tracking-widest">NIT Durgapur</p>
+                        <p class="text-4xl font-bold tracking-tight mt-3">Rank 1</p>
+                        <p class="text-zinc-400 mt-3 text-sm">Advanced Algorithms course</p>
+                    </article>
+                    <article class="milestone-card rounded-3xl border border-white/10 bg-gradient-to-br from-violet-950/40 to-transparent p-8 sm:col-span-2">
+                        <p class="text-sm text-zinc-500 uppercase tracking-widest">Meta Hacker Cup 2024</p>
+                        <p class="text-4xl md:text-5xl font-bold tracking-tight mt-3">#1375</p>
+                        <p class="text-zinc-400 mt-3 text-sm">Top 5% · Top 2000 finish globally</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial carousel -->
+        <section class="py-32 md:py-48 px-6 overflow-hidden" aria-label="Perspectives">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-end justify-between mb-12 gap-4">
+                    <h2 class="text-3xl md:text-5xl font-bold tracking-tight max-w-xl">Built for teams that care about quality</h2>
+                    <div class="flex gap-2 shrink-0">
+                        <button type="button" data-carousel-prev class="w-12 h-12 rounded-full border border-white/20 hover:bg-white/10 transition-colors" aria-label="Previous">&#8592;</button>
+                        <button type="button" data-carousel-next class="w-12 h-12 rounded-full border border-white/20 hover:bg-white/10 transition-colors" aria-label="Next">&#8594;</button>
+                    </div>
+                </div>
+                <div class="overflow-hidden">
+                    <div class="testimonial-track flex gap-6">
+                        <blockquote class="testimonial-card flex-shrink-0 rounded-3xl border border-white/10 p-8 md:p-12 bg-white/[0.03]">
+                            <div class="flex gap-6 items-start">
+                                <img src="../profile.jpg" alt="" class="w-16 h-16 rounded-full object-cover grayscale" width="64" height="64">
+                                <div>
+                                    <p class="text-lg md:text-xl leading-relaxed text-zinc-300">"Delivers enterprise APIs with measurable quality gains — SonarQube A+ and production-grade ML accuracy."</p>
+                                    <footer class="mt-6 text-sm text-zinc-500">Engineering focus · Cisco CCRC platform</footer>
+                                </div>
+                            </div>
+                        </blockquote>
+                        <blockquote class="testimonial-card flex-shrink-0 rounded-3xl border border-white/10 p-8 md:p-12 bg-white/[0.03]">
+                            <div class="flex gap-6 items-start">
+                                <img src="https://picsum.photos/seed/peer-review/128/128" alt="" class="w-16 h-16 rounded-full object-cover img-editorial" width="64" height="64">
+                                <div>
+                                    <p class="text-lg md:text-xl leading-relaxed text-zinc-300">"Authored assessment infrastructure at scale — 60+ problems and generators hitting 10M lines per second."</p>
+                                    <footer class="mt-6 text-sm text-zinc-500">Platform engineering · HackerEarth</footer>
+                                </div>
+                            </div>
+                        </blockquote>
+                        <blockquote class="testimonial-card flex-shrink-0 rounded-3xl border border-white/10 p-8 md:p-12 bg-white/[0.03]">
+                            <div class="flex gap-6 items-start">
+                                <img src="https://picsum.photos/seed/academic/128/128" alt="" class="w-16 h-16 rounded-full object-cover img-editorial" width="64" height="64">
+                                <div>
+                                    <p class="text-lg md:text-xl leading-relaxed text-zinc-300">"Top-tier algorithmic discipline — GATE 99th percentile and global contest rankings across three major platforms."</p>
+                                    <footer class="mt-6 text-sm text-zinc-500">Academic &amp; competitive record</footer>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACTION: Footer CTA -->
+        <section id="contact" class="py-32 md:py-48 px-6 relative overflow-hidden" aria-labelledby="contact-heading">
+            <div class="absolute inset-0 bg-gradient-to-b from-violet-950/30 to-ink pointer-events-none" aria-hidden="true"></div>
+            <div class="relative max-w-6xl mx-auto text-center">
+                <h2 id="contact-heading" class="text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight leading-[1.05] max-w-5xl mx-auto">
+                    Let us build something ambitious together
+                </h2>
+                <p class="mt-8 text-xl text-zinc-400 max-w-xl mx-auto">Open to full-time roles, collaborations, and technical conversations.</p>
+                <div class="mt-14 flex flex-wrap justify-center gap-4">
+                    <a href="mailto:rupanugamishra@gmail.com" class="px-10 py-5 rounded-full bg-white text-ink text-lg font-semibold hover:bg-zinc-100 transition-colors">Email me</a>
+                    <a href="https://www.linkedin.com/in/rupanugamishra/" target="_blank" rel="noopener noreferrer" class="px-10 py-5 rounded-full border-2 border-white text-white text-lg font-semibold hover:bg-white/10 transition-colors">LinkedIn</a>
+                </div>
+                <ul class="mt-16 flex flex-wrap justify-center gap-8 text-sm text-zinc-500">
+                    <li><a href="https://github.com/RupanugaPM" class="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="tel:+918100662700" class="hover:text-white transition-colors">(+91) 8100662700</a></li>
+                    <li><a href="https://codeforces.com/profile/rupanugam" class="hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">Codeforces</a></li>
+                    <li><a href="../" class="hover:text-white transition-colors">Switch design</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <footer class="py-12 px-6 border-t border-white/5 text-center text-sm text-zinc-600">
+            <p>&copy; <span id="year"></span> Rupanuga Prasad Mishra</p>
+        </footer>
+    </main>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

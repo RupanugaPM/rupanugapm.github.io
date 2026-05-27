@@ -1,0 +1,156 @@
+/* gpt-taste editorial — custom layer on Tailwind */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --font: 'Outfit', system-ui, sans-serif;
+  --bg: #0a0a0f;
+  --fg: #f8f8fa;
+  --muted: #9ca3af;
+  --card: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.font-outfit {
+  font-family: var(--font);
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.nav-pill {
+  backdrop-filter: blur(16px);
+  background: rgba(10, 10, 15, 0.65);
+  border: 1px solid var(--border);
+}
+
+.hero-bg {
+  background-image: url('https://picsum.photos/seed/rupanuga-engineering/1920/1080');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(40%) contrast(1.15);
+}
+
+.hero-wash {
+  background: radial-gradient(ellipse 90% 80% at 50% 40%, rgba(10, 10, 15, 0.35), rgba(10, 10, 15, 0.92) 70%);
+}
+
+.inline-img {
+  display: inline-block;
+  width: 5.5rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  vertical-align: middle;
+  margin: 0 0.35rem;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(30%) contrast(1.1);
+}
+
+.bento-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: border-color 0.3s;
+}
+
+.bento-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.img-editorial {
+  filter: grayscale(50%) contrast(1.2) opacity(0.92);
+  mix-blend-mode: luminosity;
+}
+
+.accordion-slice {
+  flex: 1;
+  min-width: 4rem;
+  transition: flex 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow: hidden;
+  border-right: 1px solid var(--border);
+}
+
+.accordion-slice:last-child {
+  border-right: none;
+}
+
+.accordion-slice:hover,
+.accordion-slice:focus-within {
+  flex: 4;
+}
+
+.accordion-slice .slice-inner {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.accordion-slice:hover .slice-inner,
+.accordion-slice:focus-within .slice-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.testimonial-card {
+  min-width: min(100%, 420px);
+}
+
+.milestone-card {
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.milestone-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.scrub-word {
+  opacity: 0.12;
+  display: inline;
+  margin-right: 0.25em;
+}
+
+.reveal-img {
+  will-change: transform, opacity, filter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
