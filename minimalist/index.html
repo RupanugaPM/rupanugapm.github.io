@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#top" class="skip-link">Skip to main content</a>
+
     <div class="ambient" aria-hidden="true">
         <div class="ambient__blob"></div>
         <div class="ambient__grain"></div>
@@ -20,6 +22,11 @@
     <header class="site-header">
         <div class="site-header__inner">
             <a href="#top" class="site-header__brand">Rupanuga Mishra</a>
+            <button class="site-nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+            </button>
             <nav class="site-nav" aria-label="Primary">
                 <a href="../" class="site-nav__hub">Designs</a>
                 <a href="#skills">Skills</a>
@@ -65,9 +72,11 @@
                         Codeforces: rupanugam
                     </a>
                     <a href="https://www.codechef.com/users/mrpformrp" target="_blank" rel="noopener noreferrer">
+                        <i class="ph-bold ph-trophy" aria-hidden="true"></i>
                         CodeChef: mrpformrp
                     </a>
                     <a href="https://leetcode.com/Rupanuga/" target="_blank" rel="noopener noreferrer">
+                        <i class="ph-bold ph-brackets-curly" aria-hidden="true"></i>
                         LeetCode: Rupanuga
                     </a>
                 </div>
@@ -117,28 +126,54 @@
                 <p class="section__label">Capabilities</p>
                 <h2 id="skills-heading" class="section__title">Skills</h2>
 
-                <dl class="skills-block">
-                    <dt>Programming Languages</dt>
-                    <dd>C, C++, Python, SQL, HTML, CSS, JavaScript</dd>
-                </dl>
-                <dl class="skills-block">
-                    <dt>Core Concepts</dt>
-                    <dd>Advanced Data Structures and Algorithms, Linear Algebra, Object Oriented Programming, DBMS, Computer Organization, Distributed Systems, Machine Learning, System Design</dd>
-                </dl>
-                <dl class="skills-block">
-                    <dt>Tools / Technologies</dt>
-                    <dd>Git, Linux, Django, Spring Boot, Numpy, Pandas, SonarQube, Snowflake, Docker, Pygame</dd>
-                </dl>
-                <dl class="skills-block">
-                    <dt>Soft Skills</dt>
-                    <dd>Problem Solving, Technical Leadership, Cross-functional Collaboration</dd>
-                </dl>
+                <div class="skills-group">
+                    <h3 class="skills-group__title">Programming Languages</h3>
+                    <div class="tag-row">
+                        <span class="tag tag--blue">C</span>
+                        <span class="tag tag--blue">C++</span>
+                        <span class="tag tag--blue">Python</span>
+                        <span class="tag tag--blue">SQL</span>
+                        <span class="tag tag--blue">JavaScript</span>
+                        <span class="tag tag--blue">HTML</span>
+                        <span class="tag tag--blue">CSS</span>
+                    </div>
+                </div>
 
-                <div class="tag-row">
-                    <span class="tag tag--blue">Spring Boot</span>
-                    <span class="tag tag--green">Snowflake</span>
-                    <span class="tag tag--yellow">SonarQube</span>
-                    <span class="tag tag--red">DSA</span>
+                <div class="skills-group">
+                    <h3 class="skills-group__title">Core Concepts</h3>
+                    <div class="tag-row">
+                        <span class="tag tag--red">Data Structures & Algorithms</span>
+                        <span class="tag tag--red">System Design</span>
+                        <span class="tag tag--red">Distributed Systems</span>
+                        <span class="tag tag--red">Machine Learning</span>
+                        <span class="tag tag--red">OOP</span>
+                        <span class="tag tag--red">DBMS</span>
+                        <span class="tag tag--red">Linear Algebra</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <h3 class="skills-group__title">Tools & Technologies</h3>
+                    <div class="tag-row">
+                        <span class="tag tag--green">Spring Boot</span>
+                        <span class="tag tag--green">Snowflake</span>
+                        <span class="tag tag--green">Docker</span>
+                        <span class="tag tag--green">Git</span>
+                        <span class="tag tag--green">Linux</span>
+                        <span class="tag tag--green">Django</span>
+                        <span class="tag tag--green">SonarQube</span>
+                        <span class="tag tag--green">NumPy</span>
+                        <span class="tag tag--green">Pandas</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <h3 class="skills-group__title">Soft Skills</h3>
+                    <div class="tag-row">
+                        <span class="tag tag--yellow">Problem Solving</span>
+                        <span class="tag tag--yellow">Technical Leadership</span>
+                        <span class="tag tag--yellow">Cross-functional Collaboration</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -252,14 +287,15 @@
 
                 <div class="window-chrome reveal" aria-hidden="true">
                     <div class="window-chrome__bar">
-                        <span class="window-chrome__dot"></span>
-                        <span class="window-chrome__dot"></span>
-                        <span class="window-chrome__dot"></span>
+                        <span class="window-chrome__dot window-chrome__dot--red"></span>
+                        <span class="window-chrome__dot window-chrome__dot--yellow"></span>
+                        <span class="window-chrome__dot window-chrome__dot--green"></span>
+                        <span class="window-chrome__title">segment_tree.cpp</span>
                     </div>
                     <div class="window-chrome__body">
-                        <span>segment_tree&lt;T&gt; st(n);</span><br>
-                        <span>st.update(l, r, val);</span> <kbd>O(log n)</kbd><br>
-                        <span>st.rollback(k);</span> <code>// version k</code>
+                        <span class="code-kw">segment_tree</span>&lt;<span class="code-type">T</span>&gt; st(n);<br>
+                        st.<span class="code-fn">update</span>(l, r, val); <kbd>O(log n)</kbd><br>
+                        st.<span class="code-fn">rollback</span>(k); <span class="code-comment">// revert to version k</span>
                     </div>
                 </div>
             </div>
