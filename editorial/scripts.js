@@ -144,6 +144,8 @@
   }
 
   function initBentoHover() {
+    if (prefersReduced) return;
+
     document.querySelectorAll('.bento-card').forEach((card) => {
       const media = card.querySelector('.bento-media');
       if (!media) return;
@@ -163,19 +165,43 @@
     if (!track || !prev || !next) return;
 
     let index = 0;
+    let animating = false;
     const cards = track.querySelectorAll('.testimonial-card');
 
+    function getGap() {
+      return parseFloat(getComputedStyle(track).gap) || 24;
+    }
+
     function go(dir) {
+      if (animating) return;
+      animating = true;
       index = (index + dir + cards.length) % cards.length;
       gsap.to(track, {
-        x: -index * (cards[0].offsetWidth + 24),
+        x: -index * (cards[0].offsetWidth + getGap()),
         duration: 0.6,
         ease: 'power3.inOut',
+        onComplete: () => { animating = false; },
       });
     }
 
     prev.addEventListener('click', () => go(-1));
     next.addEventListener('click', () => go(1));
+  }
+
+  function initScrollTop() {
+    const btn = document.getElementById('scroll-top');
+    if (!btn) return;
+
+    ScrollTrigger.create({
+      start: 'top -600',
+      onUpdate: (self) => {
+        btn.classList.toggle('scroll-top-btn--visible', self.scroll() > 600);
+      },
+    });
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -190,6 +216,7 @@
     }
     initBentoHover();
     initTestimonialCarousel();
+    initScrollTop();
 
     ScrollTrigger.refresh();
   });

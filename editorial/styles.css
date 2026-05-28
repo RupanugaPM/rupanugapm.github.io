@@ -39,6 +39,13 @@ body {
   backdrop-filter: blur(16px);
   background: rgba(10, 10, 15, 0.65);
   border: 1px solid var(--border);
+  transition: background 0.35s, border-color 0.35s, box-shadow 0.35s;
+}
+
+.nav-pill--scrolled {
+  background: rgba(10, 10, 15, 0.92);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
 .hero-bg {
@@ -177,6 +184,62 @@ body {
   will-change: transform, opacity, filter;
 }
 
+/* Focus-visible for keyboard navigation */
+:focus-visible {
+  outline: 2px solid rgba(167, 139, 250, 0.7);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(167, 139, 250, 0.7);
+  outline-offset: 3px;
+}
+
+/* Page entrance */
+body {
+  opacity: 0;
+  animation: page-enter 0.6s ease-out 0.1s forwards;
+}
+
+@keyframes page-enter {
+  to { opacity: 1; }
+}
+
+/* Scroll-to-top button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border);
+  color: var(--fg);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition: opacity 0.35s, transform 0.35s, background 0.25s;
+  z-index: 90;
+}
+
+.scroll-top-btn--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.scroll-top-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
     animation: none;
@@ -184,5 +247,14 @@ body {
 
   html {
     scroll-behavior: auto;
+  }
+
+  body {
+    opacity: 1;
+    animation: none;
+  }
+
+  .scroll-top-btn {
+    transition: none;
   }
 }
